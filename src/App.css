@@ -1,0 +1,91 @@
+.App {
+  text-align: center;
+}
+
+table{
+  border:1px solid gray;
+  width: 100%;
+  border-collapse: collapse;
+}
+th,td{
+  border: 1px solid rgb(206, 204, 204);
+  padding: 10px;
+}
+
+.form-row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0px 20px;
+}
+.action{
+  position: relative;
+}
+.popup{
+  position: absolute;
+  z-index: 11;
+  background: #150050;
+  color: #fff;
+  padding: 10px;
+  left: 164px;
+  top: 17px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.test{
+  display: inline-block;
+  cursor: pointer;
+}
+.test:after {
+  content: '\2807';
+  font-size: 25px;
+  color: #3F0071;
+}
+input[type="text"]{
+  padding: 8px 10px;
+  border:2px solid #150050;
+  border-radius: 5px;
+}
+.search_box{
+  padding: 8px 10px;
+}
+.sub_btn , .up_btn{
+background-color: #150050;
+color: #fff;
+border:none;
+margin-left: 15px;
+padding: 9px 10px;
+border-radius: 5px;
+font-weight: 600;
+}
+.up_btn{
+  background-color: #03C988;
+}
+.input_b{
+  border:2px solid #03C988;
+}
+.error{
+  border: 2px solid red;
+}
+.inAct{
+  color: red;
+}
+.act{
+  color: green;
+}
+.popup p{
+  margin: 0;
+  text-align: left;
+  padding: 4px 4px;
+  cursor: pointer;
+  display: block;
+  transition: .4s;
+}
+.popup p:hover{
+  background-color: #fff;
+  color: #150050;
+  display: block;
+  border-radius: 5px;
+}
