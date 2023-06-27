@@ -1,19 +1,14 @@
-import { useState } from 'react';
-import './App.css';
-import Home from './component/Home';
-import TableData from './component/Table';
+import "./App.css";
+import TableData from "./component/Table";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
-  // const [state , setState] = useState({
-  //   title:"sdfsdf"
-  // });
   return (
     <div className="App">
-    <h1>Table Task</h1>
-      {/* <Home state={state} setState={setState}/> */}
+      <h1>Table Task</h1>
       <TableData />
     </div>
   );
-}
+};
 
 export default App;
