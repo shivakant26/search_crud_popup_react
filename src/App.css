@@ -16,8 +16,8 @@ th,td{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 0px 20px;
 }
+
 .action{
   position: relative;
 }
@@ -27,7 +27,7 @@ th,td{
   background: #150050;
   color: #fff;
   padding: 10px;
-  left: 164px;
+  right: 0;
   top: 17px;
   border-radius: 5px;
   margin-bottom: 5px;
@@ -43,7 +43,7 @@ th,td{
   font-size: 25px;
   color: #3F0071;
 }
-input[type="text"]{
+input[type="text"], input[type="password"]{
   padding: 8px 10px;
   border:2px solid #150050;
   border-radius: 5px;
@@ -88,4 +88,76 @@ font-weight: 600;
   color: #150050;
   display: block;
   border-radius: 5px;
+}
+
+/* login form */
+.login_form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+}
+.login_form input[type="text"], .login_form [type="password"]{
+border:1px solid gray;
+}
+.login_form input[type="text"]:focus, .login_form [type="password"]:focus{
+  outline: none !important;
+  box-shadow: none !important;
+}
+button.login_btn.btn.btn-primary {
+  background-color: #150050;
+  width: 130px;
+  letter-spacing: 3.2px;
+}
+.form_field{
+  position: relative;
+}
+.errorr{
+  position: absolute;
+    color: red;
+    left: 0;
+    font-size: 12px;
+}
+.toast-message{
+  position: absolute;
+  top: 0;
+}
+/* dashborad */
+.sidebar{
+  background-color: #150050;
+  color: #fff;
+  height: 700px;
+}
+.sidebar ul{
+  list-style: none;
+  margin-top: 30px;
+}
+.sidebar ul li a:hover , .sidebar ul li.active a{
+  text-decoration: none;
+    transition: .4s;
+    display: block;
+    background-color: #fff;
+    color: #150050 !important;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.sidebar ul li a{
+  text-decoration: none;
+  transition: .4s;
+  text-align: left;
+  padding: 10px 33px;
+  display: block;
+  color: #fff;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  margin-bottom: 5px;
+}
+.profile_image img{
+  height: 180px;
+  border:2px solid gray;
+  width: 180px;
+  border-radius: 50%;
+  margin-top: 22px;
 }

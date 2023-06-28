@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Col, Row } from "react-bootstrap";
 
 const TableData = () => {
   const [status, setStatus] = useState(0);
@@ -15,7 +16,7 @@ const TableData = () => {
   const [activeIndex, setActiveIndex] = useState();
   const [uid, setUid] = useState(null);
   const [error, setError] = useState(false);
-  
+
   const filterData = searchText
     ? list.filter((el) =>
         el.title?.toLowerCase().includes(searchText.toLowerCase())
@@ -94,7 +95,7 @@ const TableData = () => {
           });
           return updatedList;
         });
-        setShow(false)
+        setShow(false);
         break;
       case "inactive":
         setList((prevList) => {
@@ -115,13 +116,15 @@ const TableData = () => {
 
   return (
     <>
+    <Row>
+    <Col className="mt-5 mb-5">
       <div className="form-row">
         <div className="form_section">
           <input
             type="text"
             placeholder="New Title"
             value={title ? title : ""}
-            className={error ? "error":""}
+            className={error ? "error" : ""}
             onChange={(e) => setTitle(e.target.value)}
           />
           <button className={uid ? "up_btn" : "sub_btn"} onClick={addTitle}>
@@ -137,7 +140,9 @@ const TableData = () => {
           />
         </div>
       </div>
-      <hr />
+    </Col>
+    </Row>
+    <Row>
       <div className="table">
         <table ref={tableRef}>
           <thead>
@@ -154,7 +159,9 @@ const TableData = () => {
                 {filterData?.map((item, index) => (
                   <tr key={index}>
                     <td>{index}</td>
-                    <td style={{textTransform:"capitalize"}}>{item.title}</td>
+                    <td style={{ textTransform: "capitalize" }}>
+                      {item.title}
+                    </td>
                     <td className={item.status === 0 ? "inAct" : "act"}>
                       {item.status === 0 ? "InActive" : "Active"}
                     </td>
@@ -195,6 +202,8 @@ const TableData = () => {
           </tbody>
         </table>
       </div>
+    </Row>
+     
     </>
   );
 };
