@@ -24,8 +24,7 @@ const Login = () => {
       <div className="login_form_page">
         <Container>
           <Row>
-            <Col></Col>
-            <Col xs={12} sm={12} lg={4} md={4}>
+            <Col xs={12} sm={12} lg={12} md={12}>
               <Formik
                 initialValues={initialState}
                 validationSchema={LoginSchema}
@@ -48,6 +47,9 @@ const Login = () => {
                       />
                     )}
                     <form onSubmit={handleSubmit}>
+                    <div className="login_image">
+                      <img src={require("../assets/images/logo.jpeg")}  alt="login_img"/>
+                    </div>
                       <div className="form_field mb-4">
                         <Form.Control
                           type="text"
@@ -100,7 +102,6 @@ const Login = () => {
                 )}
               </Formik>
             </Col>
-            <Col></Col>
           </Row>
         </Container>
       </div>

@@ -41,19 +41,25 @@ export const socialIconArray = [
     icon: <FaFacebookF />,
     totalFollowers: 21.1,
     extraClass: "f_bg",
+    footerbgClass:"ft_fb"
   },
   {
     icon: <FaTwitter />,
     totalFollowers: 10.1,
     extraClass: "tw_bg",
+    footerbgClass:"ft_twr"
+
   },
   {
     icon: <FaGooglePlusG />,
     totalFollowers: 5,
     extraClass: "gplus_bg",
+    footerbgClass:"ft_gplus"
+
   },
   {
     icon: <FaInstagram />,
+    footerbgClass:"ft_insta"
   },
 ];
 export const SiteMenu = [

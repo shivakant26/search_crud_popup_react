@@ -10,3 +10,8 @@
 # Laibrary used
 1. react-bootstrap
 2. npm i bootstrap-icons
+
+# For add Post 
+url : http://localhost:3000/login
+userId : admin@gmail.com
+password : 123456
