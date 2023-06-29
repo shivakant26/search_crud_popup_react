@@ -1,21 +1,21 @@
 import { useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import { Link, Outlet, useLocation } from "react-router-dom";
-import { dashboardRoute } from "../constant";
+import { dashboardRoute } from "../../utils/constant";
 
-const DashBoard = () => {
+const DashBoardCmp = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const location = useLocation();
   console.log(location.pathname);
   return (
     <>
-      <div className="dashboard">
+      <div className="dashboard container-fluid">
         <Row>
           <Col xm={12} sm={12} md={3}>
             <div className="sidebar">
               <div className="profile_image">
                 <img
-                  src={require("../assets/images/profile.jpg")}
+                  src={require("../../assets/images/profile.jpg")}
                   alt="profile_image"
                 />
               </div>
@@ -53,4 +53,4 @@ const DashBoard = () => {
   );
 };
 
-export default DashBoard;
+export default DashBoardCmp;
