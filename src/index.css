@@ -11,6 +11,331 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* home page design */
+.header{
+  border-top: 1px solid #e5e3e3;
+  border-bottom: 1px solid #e5e3e3;
+  padding: 10px 0;
+}
+.site-menu{
+  text-align: center;
+}
+.site-menu ul{
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+}
+.site-menu ul li{
+  padding: 8px 25px;
+}
+.site-menu ul li a{
+  text-transform: uppercase;
+  font-size: 15px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 700;
+  transition: .4s;
+}
+.site-menu ul li a:hover{
+  color: tomato;
+}
+.post_card_section{
+  padding: 45px 15px;
+}
+.blog{
+  position: relative;
+}
+.overlay{
+  position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.overlay_text{
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  color: #fff;
+  width: 100%;
+  text-align: left;
+  padding: 45px 30px;
+}
+.overlay_text h5{
+  font-size: 26px;
+}
+.category{
+  margin: 0;
+  text-transform: uppercase;
+  color: tomato;
+  font-weight: 700;
+}
+.author{
+  display: flex;
+  gap: 25px;
+}
+.blog{
+  overflow: hidden;
+}
+
+.blog img{
+  width: 100%;
+  transition: 0.3s;
+}
+
+.social_icon{
+  display: flex;
+  gap: 35px;
+  align-items: center;
+  padding: 10px 0px;
+}
+.site_logo a{
+  text-decoration: none;
+    color: #000;
+}
+.humberger_menu{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 0px;
+  gap: 25px;
+}
+
+.mobile_menu{
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+  position: absolute;
+  transition: .4s;
+  top: 56px;
+  z-index: 40;
+  background: black;
+}
+.mobile_menu ul{
+  list-style: none;
+  padding: 10px;
+  width: 189px;
+  text-align: left;
+}
+.mobile_menu ul li{
+  padding: 10px 8px;
+}
+.mobile_menu ul li a{
+  color: #fff;
+  transition: .4s;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.mobile_menu ul li a:hover{
+  color:tomato;
+}
+
+.hd_top.row {
+  align-items: center;
+}
+.heading-2 , .heading-small-2{
+  text-align: left;
+    font-size: 19px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 27px;
+    position: relative;
+}
+.heading-2::after , .heading-small-2::after{
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 4px;
+  background: #d1cece;
+  top: 12px;
+  left: 20%;
+  width: 80%;
+}
+.heading-small-2::after{
+  left: 41%;
+  width: 59%;
+}
+.social_media_group{
+  display: flex;
+  margin-bottom: 25px;
+}
+.ssl_cmn{
+  width: 33%;
+  color: #fff;
+  padding: 16px 0px;
+}
+.ssl_cmn svg{
+  font-size: 30px;
+}
+.ssl_cmn p{
+  margin: 0;
+}
+.f_bg{
+  background-color: #225b99;
+}
+.tw_bg{
+  background: #00adf2;
+}
+.gplus_bg{
+  background: #dc4d2d !important;
+}
+.categories_list ul{
+  list-style: none;
+  padding: 0;
+}
+.categories_list ul li{
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 0px;
+  border-bottom: 1px solid #cdcdcd;
+}
+.categories_list ul li a{
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: .4s;
+  color: #000;
+}
+.categories_list ul li a:hover{
+  color: #dc4d2d;
+}
+
+.categories_list{
+  margin-bottom: 25px;
+}
+.subs_btn{
+  background: #ee4266;
+    border: none;
+    padding: 5px 12px;
+    border:2px solid #ee4266;
+    width: 150px;
+    color: #fff;
+    transition: .4s;
+    text-transform: uppercase;
+}
+
+.subs_btn:hover{
+  border:2px solid #ee4266;
+  background-color: #fff;
+  color: #ee4266;
+}
+
+.news_latter{
+  text-align: left;
+}
+.news_latter input[type="text"]{
+  width: 94%;
+  border: 2px solid #dfd6d6;
+  border-radius: unset;
+  margin-bottom: 25px;
+}
+.lf_card.card {
+  border: none;
+  text-align: left;
+}
+.lf_card.card a{
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 0;
+  transition: .4s;
+  color: #000;
+}
+
+.lf_card.card a:hover{
+  color: #ee4266;
+}
+
+.lf_card.card .card_title{
+  padding: 10px 0px;
+}
+.lf_card.card .card-body{
+  padding: 15px 0px !important;
+}
+
+.heading-6{
+  color: #ee4266;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.footer_section{
+  background-color: #000;
+  color: #fff;
+  padding: 50px 0px;
+}
+
+.footer_section .categories_list ul li a{
+  color: #fff !important;
+  transition: .4s;
+}
+
+.footer_section .categories_list ul li a:hover{
+  color: #ee4266;
+}
+.tags{
+  text-align: left;
+}
+.tags a{
+  background: #323335;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  font-size: 15px;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 5px;
+  transition: .4s;
+  text-decoration: none;
+  color: #fff;
+}
+.tags a:hover{
+  background-color: #ee4266;
+}
+
+.ft-logo a{
+  text-decoration: none;
+  color: #fff;
+}
+.footer_site_details{
+  text-align: left;
+}
+.footer_social_icons ul{
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 13px;
+}
+
+.footer_social_icons ul li a{
+  color:#fff;
+  background: red;
+    padding: 6px 8px;
+    border-radius: 50%;
+}
+@media only screen and (max-width : 998px){
+  .overlay_text {
+    padding: 5px 15px;
+}
+.col-sm-12 {
+  margin-top: 13px !important;
+}
+}
+@media only screen and (max-width : 768px){
+  .header{
+    display: none;
+  }
+  .mobile_menu {
+    top: 186px;
+  }
+  .social_icon,.humberger_menu{
+    justify-content: center;
+}
+}
+
 /* ul {
   list-style: none;
   padding: 0;
