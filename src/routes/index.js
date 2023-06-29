@@ -9,7 +9,6 @@ import Logout from "../component/Logout";
 import Login from "../component/Login";
 const MainRoute = () =>{
     return(
-        <Router>
         <Routes>
           <Route
             path="/"
@@ -57,7 +56,6 @@ const MainRoute = () =>{
           />
           </Route>
         </Routes>
-      </Router>
     )
 }
 export default MainRoute;

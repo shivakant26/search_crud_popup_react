@@ -1,79 +1,15 @@
 import { Col, Container, Row, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { HiSearch } from "react-icons/hi";
 import { useState } from "react";
-import Hamburger from "hamburger-react";
 import { SiteMenu, socialIconArray, tagsList } from "../utils/constant";
 import NewsLatter from "../component/common/NewsLatter";
 import PostCategory from "../component/common/PostCategory";
 import SiteLogo from "../component/common/SiteLogo";
+// import Header from "../component/Header";
 
 const Home = () => {
-  const [isOpen, setOpen] = useState(false);
   return (
     <>
-      <div className="header-top">
-        <Container>
-          <Row className="hd_top">
-            <Col xs={12} sm={12} md={4}>
-              <div className="social_icon">
-                {socialIconArray?.map((item, index) => {
-                  return <span key={index}>{item.icon}</span>;
-                })}
-              </div>
-            </Col>
-            <Col xs={12} sm={12} md={4}>
-              <SiteLogo />
-            </Col>
-            <Col xs={12} sm={12} md={4}>
-              <div className="humberger_menu">
-                <Hamburger
-                  className={{ position: "relative" }}
-                  toggled={isOpen}
-                  toggle={setOpen}
-                />
-                {isOpen && (
-                  <div className="mobile_menu">
-                    <ul>
-                      {SiteMenu?.filter((el) => {
-                        if (el.forMobile) {
-                          return el;
-                        }
-                      })?.map((item, index) => {
-                        return (
-                          <li key={index}>
-                            <Link to={item.endPoint}>{item.label}</Link>
-                          </li>
-                        );
-                      })}
-                    </ul>
-                  </div>
-                )}
-                <span>
-                  <HiSearch />
-                </span>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </div>
-      <div className="header">
-        <Container>
-          <Row>
-            <div className="site-menu">
-              <ul>
-                {SiteMenu?.map((item, index) => {
-                  return (
-                    <li key={index}>
-                      <Link to={item.endPoint}>{item.label}</Link>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-          </Row>
-        </Container>
-      </div>
       <div className="post_card_section">
         <Container>
           <Row>
@@ -282,50 +218,6 @@ const Home = () => {
               <h2 className="heading-small-2">categories</h2>
               <PostCategory SiteMenu={SiteMenu} />
               <h2 className="heading-small-2">Newsletter</h2>
-              <NewsLatter />
-            </Col>
-          </Row>
-        </Container>
-      </div>
-      <div className="footer_section">
-        <Container>
-          <Row>
-            <Col xs={12} sm={12} md={3}>
-              <div className="footer_site_details">
-                <SiteLogo classAttr="ft-logo" />
-                <p>
-                  Nec feugiat nisl pretium fusce id velit ut tortor pretium.
-                  Nisl purus in mollis nunc sed. Nunc non blandit massa enim
-                  nec.
-                </p>
-                <div className="footer_social_icons">
-                  <ul>
-                    {socialIconArray?.map((item, index) => {
-                      return (
-                        <li key={index}>
-                          <Link to="#javascript">{item.icon}</Link>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </div>
-              </div>
-            </Col>
-            <Col xs={12} sm={12} md={3}>
-              <PostCategory SiteMenu={SiteMenu} />
-            </Col>
-            <Col xs={12} sm={12} md={3}>
-              <div className="tags">
-                {tagsList?.map((item, index) => {
-                  return (
-                    <a key={index} href="#javascript">
-                      {item}
-                    </a>
-                  );
-                })}
-              </div>
-            </Col>
-            <Col xs={12} sm={12} md={3}>
               <NewsLatter />
             </Col>
           </Row>

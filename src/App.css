@@ -91,12 +91,15 @@ font-weight: 600;
 }
 
 /* login form */
+.login_form_page{
+  background: #efefef;
+}
 .login_form{
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 100vh;
+  height: 80vh;
 }
 .login_form input[type="text"], .login_form [type="password"]{
 border:1px solid gray;

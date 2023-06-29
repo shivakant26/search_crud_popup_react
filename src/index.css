@@ -11,7 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
 /* home page design */
+
 .header{
   border-top: 1px solid #e5e3e3;
   border-bottom: 1px solid #e5e3e3;
@@ -94,6 +96,13 @@ code {
   align-items: center;
   padding: 10px 0px;
 }
+.social_icon span a{
+  color: #000;
+  transition: .4s;
+}
+.social_icon span a:hover{
+  color: #d341b2;
+}
 .site_logo a{
   text-decoration: none;
     color: #000;
@@ -105,7 +114,15 @@ code {
   padding: 10px 0px;
   gap: 25px;
 }
-
+form{
+  width: 300px;
+}
+.login_image img{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 45px;
+}
 .mobile_menu{
   box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
   position: absolute;
@@ -263,6 +280,12 @@ code {
   font-size: 16px;
 }
 
+.life_style_cards{
+  padding-bottom: 50px;
+}
+
+/* footer section style */
+
 .footer_section{
   background-color: #000;
   color: #fff;
@@ -312,10 +335,23 @@ code {
 
 .footer_social_icons ul li a{
   color:#fff;
-  background: red;
-    padding: 6px 8px;
-    border-radius: 50%;
+  padding: 6px 8px;
+  border-radius: 50%;
 }
+
+.ft_fb{
+background-color: #225b99;
+}
+.ft_twr{
+  background: #00adf2;
+}
+.ft_gplus{
+  background: #dc4d2d;
+}
+.ft_insta{
+  background: #d341b2;
+}
+
 @media only screen and (max-width : 998px){
   .overlay_text {
     padding: 5px 15px;
