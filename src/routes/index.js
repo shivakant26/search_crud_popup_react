@@ -2,60 +2,57 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import PublicRoutes from "./PublicRoutes";
 import Home from "../pages/Home";
 import ProtectedRoutes from "./ProtectedRoutes";
-import DashBoard from "../pages/Dashboard";
-import TableData from "../component/dashboard/Table";
-import Post from "../component/dashboard/Posts";
-import Logout from "../component/Logout";
 import Login from "../component/Login";
-const MainRoute = () =>{
-    return(
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <PublicRoutes>
-                <Home />
-              </PublicRoutes>
-            }
-          />
-          <Route
-            path="/login"
-            element={
-              <PublicRoutes>
-                <Login />
-              </PublicRoutes>
-            }
-          />
-          <Route
-            path="/dashboard/"
-            element={
-              <ProtectedRoutes>
-                <DashBoard />
-              </ProtectedRoutes>
-            }
-          >
+import Layout from "../component/layout/Index";
+import DashboardLayout from "../component/layout/DashboardLayout";
+import { dashRouteArray } from "../utils/constant";
+import PageNotFound from "../pages/404";
+const MainRoute = () => {
+  return (
+    <Routes>
+      <Route
+        path="/login"
+        element={
+          <PublicRoutes>
+            <Login />
+          </PublicRoutes>
+        }
+      />
+      <Route path="*" element={<PageNotFound />} />
+      <Route element={<Layout />}>
+        <Route
+          path="/"
+          element={
+            <PublicRoutes>
+              <Home />
+            </PublicRoutes>
+          }
+        />
+      </Route>
+      <Route element={<DashboardLayout />}>
+        {dashRouteArray?.map((item, index) => {
+          return (
             <Route
-              path="table-data"
-              element={
-                <ProtectedRoutes>
-                  <TableData />
-                </ProtectedRoutes>
-              }
-            />
-            <Route
-              path="posts"
-              element={
-                <ProtectedRoutes>
-                  <Post />
-                </ProtectedRoutes>
-              }
-            />
-            <Route
-            path="logout"
-            element={<Logout />}
-          />
-          </Route>
-        </Routes>
-    )
-}
+              key={index}
+              path={item.path}
+              element={<ProtectedRoutes>{item.component}</ProtectedRoutes>}
+            >
+              {item.subRoute?.map((route, index) => {
+                return (
+                  <Route
+                    key={index}
+                    path={route.path}
+                    element={
+                      <ProtectedRoutes>{route.component}</ProtectedRoutes>
+                    }
+                  />
+                );
+              })}
+            </Route>
+          );
+        })}
+      </Route>
+    </Routes>
+  );
+};
 export default MainRoute;

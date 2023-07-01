@@ -116,6 +116,7 @@ code {
 }
 form{
   width: 300px;
+  text-align: center;
 }
 .login_image img{
   height: 100px;
@@ -350,6 +351,37 @@ background-color: #225b99;
 }
 .ft_insta{
   background: #d341b2;
+}
+
+/* page not found */
+.page_not_found{
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.page_content{
+  text-align: center;
+}
+.page_not_found h1 {
+    font-size: 72px;
+    letter-spacing: 11.2px;
+    color: tomato;
+}
+.page-content h3{
+  text-transform: uppercase;
+}
+.contact_btn , .goto_home_btn{
+  margin-left: 9px;
+  background: #000;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+.goto_home_btn{
+  background-color: #00adf2;
 }
 
 @media only screen and (max-width : 998px){
