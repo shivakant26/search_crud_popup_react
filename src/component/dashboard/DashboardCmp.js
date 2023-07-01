@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import { Link, Outlet, useLocation } from "react-router-dom";
-import { dashboardRoute } from "../../utils/constant";
+import { dashSidebarMenu } from "../../utils/constant";
 
 const DashBoardCmp = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -20,7 +20,7 @@ const DashBoardCmp = () => {
                 />
               </div>
               <ul>
-                {dashboardRoute?.map((item, index) => {
+                {dashSidebarMenu?.map((item, index) => {
                   return (
                     <li
                       key={index}

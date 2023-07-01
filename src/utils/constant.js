@@ -4,8 +4,12 @@ import {
   FaInstagram,
   FaTwitter,
 } from "react-icons/fa";
+import DashBoard from "../pages/Dashboard";
+import TableData from "../component/dashboard/Table";
+import Post from "../component/dashboard/Posts";
+import Logout from "../component/Logout";
 
-export const dashboardRoute = [
+export const dashSidebarMenu = [
   {
     slug: "",
     linkName: "Dashboard",
@@ -87,6 +91,11 @@ export const SiteMenu = [
     forMobile: true,
   },
   {
+    label: "login",
+    endPoint: "/login",
+    forMobile: true,
+  },
+  {
     label: "travel",
     endPoint: "/travel",
     category: 38,
@@ -110,3 +119,24 @@ export const tagsList = [
   "magazine",
   "health",
 ];
+
+export const dashRouteArray = [
+  {
+    path:"/dashboard/",
+    component:<DashBoard/>,
+      subRoute:[
+        {
+          path:"table-data",
+          component:<TableData/>
+        },
+        {
+          path:"posts",
+          component:<Post/>
+        },
+        {
+          path:"logout",
+          component:<Logout />
+        },
+      ]
+  },
+]
