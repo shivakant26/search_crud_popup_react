@@ -106,6 +106,7 @@ code {
 .site_logo a{
   text-decoration: none;
     color: #000;
+    text-align: center;
 }
 .humberger_menu{
   display: flex;
@@ -181,10 +182,14 @@ form{
   display: flex;
   margin-bottom: 25px;
 }
+.profile_image{
+text-align: center;
+}
 .ssl_cmn{
   width: 33%;
   color: #fff;
   padding: 16px 0px;
+  text-align: center;
 }
 .ssl_cmn svg{
   font-size: 30px;
@@ -384,6 +389,131 @@ background-color: #225b99;
   background-color: #00adf2;
 }
 
+
+/* post page */
+.post_page{
+  padding: 20px;
+}
+.post_page h2{
+  margin-bottom: 25px;
+  color: gray;
+}
+.post_page input[type="text"]{
+  width: 100%;
+  border:1px solid gray;
+}
+.post_page input[type="text"]:focus , .post_page textarea{
+  outline: none;
+}
+.post_page textarea{
+  width: 100%;
+  resize: none;
+  margin-top: 40px;
+  padding: 8px 12px;
+}
+.publish_sec{
+  border: 1px solid #d9d4d4;
+  border-top: none;
+}
+.publish_header , .button_group , .publish_footer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border: 1px solid #d3cccc;
+  padding: 6px 15px;
+  text-transform: capitalize;
+}
+.button_group{
+  border:none;
+  padding: 0;
+}
+
+.button_group button{
+  border: 1px solid rgb(190, 190, 190);
+  border-radius: 5px;
+}
+
+.publish_body{
+  padding: 15px;
+}
+
+.publish_body p{
+  margin: 5px 0px;
+}
+
+.publish_footer{
+  padding: 8px 15px;
+  border: none;
+  border-top: 1px solid #ebe1e1;
+}
+.publish_footer a{
+  text-decoration: none;
+  text-transform: none;
+  color: #dc4d2d;
+}
+.publish_footer button{
+  background-color: #2ea2cc;
+  color: #fff;
+  border:none;
+  padding: 4px 10px;
+  border-radius: 5px;
+}
+.format , .categories{
+  margin-top: 15px;
+}
+.mr_lf{
+  margin-left: 8px;
+}
+.author{
+  margin-top: 25px;
+}
+.post_details input[type="file"]{
+  margin-top: 25px;
+}
+
+.new_category p{
+  text-decoration: underline;
+  color: #225b99;
+  cursor:pointer;
+}
+
+#category{
+  width: 100%;
+  border: 1px solid rgb(206, 206, 206);
+}
+
+#category:focus{
+  outline: none;
+}
+
+/* otp model desing */
+.input_group{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 11px;
+}
+
+.otp_input{
+  width: 50px;
+  text-align: center;
+  border:1px solid rgb(207, 207, 207) !important;
+}
+
+.otp-model .modal-footer {
+  display: unset !important;
+}
+
+.otp_buttons{
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons{
+  display: flex;
+  gap:3px;
+}
+
 @media only screen and (max-width : 998px){
   .overlay_text {
     padding: 5px 15px;
@@ -481,4 +611,4 @@ ul:after {
 
 ul:after {
   clear: both;
-} */
+}  */

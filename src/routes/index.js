@@ -7,6 +7,7 @@ import Layout from "../component/layout/Index";
 import DashboardLayout from "../component/layout/DashboardLayout";
 import { dashRouteArray } from "../utils/constant";
 import PageNotFound from "../pages/404";
+
 const MainRoute = () => {
   return (
     <Routes>
