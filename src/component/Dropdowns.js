@@ -24,10 +24,11 @@ const Dropdowns = ({data}) => {
       setMenuData(updatedMenuData);
     }
   };
+  
 
   useEffect(() => {
     document.addEventListener("click", (e, i) => {
-      return elementsRef.current.map((ref, index) => {
+      return elementsRef.current?.map((ref, index) => {
         return handleClickOutside(e, index === i ? ref : "", index);
       });
     });
@@ -36,7 +37,7 @@ const Dropdowns = ({data}) => {
 
       document.addEventListener("click", (e, i) => {
         console.log("jsdsjfsdfg");
-        return elementsRef.current.map((ref, index) => {
+        return elementsRef.current?.map((ref, index) => {
           return handleClickOutside(e, elementsRef.current[index], index);
         });
       });
@@ -44,7 +45,7 @@ const Dropdowns = ({data}) => {
   }, []);
 
   const renderMenuItems = (items) => {
-    return items.map((item, index) => (
+    return items?.map((item, index) => (
       <li key={index}>
         <a
           href={item.href}
