@@ -514,6 +514,10 @@ background-color: #225b99;
   gap:3px;
 }
 
+.otp_error{
+  color:tomato;
+  text-align: center;
+}
 @media only screen and (max-width : 998px){
   .overlay_text {
     padding: 5px 15px;

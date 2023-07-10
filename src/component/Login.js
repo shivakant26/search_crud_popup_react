@@ -13,6 +13,7 @@ const Login = () => {
   const [otpdigit, setOtpDigits] = useState(["", "", "", ""]);
   const [resendTimer, setResendTimer] = useState(180); // Timer in seconds
   const [timerId, setTimerId] = useState(null);
+  const [otpError , setOtpError] = useState("");
   const navigate = useNavigate();
   const initialState = { email: "", password: "" };
 
@@ -31,8 +32,10 @@ const Login = () => {
     if (otp === Number(otpValue)) {
       localStorage.setItem("token", "1231213kjioj255115");
       setShowOtpModel(false);
+      setOtpError("");
       navigate("/dashboard");
     } else {
+      setOtpError("OTP Not Matched!")
       return false;
     }
     setOtp("");
@@ -50,6 +53,7 @@ const Login = () => {
           setOtpDigits={setOtpDigits}
           resendTimer={resendTimer}
           timerId={timerId}
+          otpError={otpError}
           setResendTimer={setResendTimer}
           setTimerId={setTimerId}
         />

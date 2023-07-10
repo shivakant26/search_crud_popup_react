@@ -105,6 +105,11 @@ export const SiteMenu = [
     endPoint: "/health",
     category: 25,
   },
+  {
+    label: "sports",
+    endPoint: "/sports",
+    category: 25,
+  },
 ];
 
 export const tagsList = [

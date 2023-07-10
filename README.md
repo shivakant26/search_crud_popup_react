@@ -6,6 +6,9 @@
 5. Make Custome Popup and Hide and Show .
 6. Popup hide Outside window .
 7. Active and inActive via Popup option .
+8. login with otp verification .
+9. redux-toolkit
+10. fev-icon set
 
 # Laibrary used
 1. react-bootstrap
@@ -15,3 +18,8 @@
 url : http://localhost:3000/login
 userId : admin@gmail.com
 password : 123456
+
+
+# for back End
+run this command on new terminal
+npx json-server --watch db.json --port 30001
