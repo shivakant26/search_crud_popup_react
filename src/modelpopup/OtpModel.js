@@ -8,6 +8,7 @@ const OtpModel = ({
   verifyOtp,
   otpdigit,
   otp,
+  otpError,
   setOtpDigits,
 
 }) => {
@@ -54,6 +55,7 @@ const OtpModel = ({
               />
             ))}
           </div>
+          <div className="otp_error">{otpError}</div>
         </Modal.Body>
         <Modal.Footer>
           <div className="otp_buttons">

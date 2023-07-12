@@ -3,13 +3,15 @@ import { RiArrowUpSFill, RiArrowDownSFill } from "react-icons/ri";
 import { BsPlus } from "react-icons/bs";
 import { useState } from "react";
 import CategoryModel from "./CategoryModel";
+import { useDispatch } from "react-redux";
+import { newPost } from "../../Redux/PostSlice";
 
 const Post = () => {
   const [publishShow, setPublishShow] = useState(true);
   const [formatShow, setFormatShow] = useState(true);
   const [show, setShow] = useState(true);
   const [showCatModel, setShowCatModel] = useState(false);
-  
+  const dispatch = useDispatch();
   const [state, setState] = useState({
     postTitle: "",
     discription: "",
@@ -21,7 +23,9 @@ const Post = () => {
   });
 
   const publishData = () => {
+    dispatch(newPost(state))
     console.log(123, state);
+
   };
 
   const handleChange = (e, value) => {

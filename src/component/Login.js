@@ -5,7 +5,7 @@ import { LoginSchema } from "./validation";
 import { useNavigate } from "react-router-dom";
 import ToastAlert from "./ToastAlert";
 import OtpModel from "../modelpopup/OtpModel";
-
+import {TbArrowBackUp} from 'react-icons/tb';
 const Login = () => {
   const [showOtpModel, setShowOtpModel] = useState(false);
   const [showToast, setShowToast] = useState(false);
@@ -13,6 +13,7 @@ const Login = () => {
   const [otpdigit, setOtpDigits] = useState(["", "", "", ""]);
   const [resendTimer, setResendTimer] = useState(180); // Timer in seconds
   const [timerId, setTimerId] = useState(null);
+  const [otpError , setOtpError] = useState("");
   const navigate = useNavigate();
   const initialState = { email: "", password: "" };
 
@@ -31,8 +32,10 @@ const Login = () => {
     if (otp === Number(otpValue)) {
       localStorage.setItem("token", "1231213kjioj255115");
       setShowOtpModel(false);
+      setOtpError("");
       navigate("/dashboard");
     } else {
+      setOtpError("OTP Not Matched!")
       return false;
     }
     setOtp("");
@@ -50,12 +53,14 @@ const Login = () => {
           setOtpDigits={setOtpDigits}
           resendTimer={resendTimer}
           timerId={timerId}
+          otpError={otpError}
           setResendTimer={setResendTimer}
           setTimerId={setTimerId}
         />
       )}
       <div className="login_form_page">
         <Container>
+      <button className="bk_btn" onClick={()=>navigate("/")}><TbArrowBackUp /></button> 
           <Row>
             <Col xs={12} sm={12} lg={12} md={12}>
               <Formik
