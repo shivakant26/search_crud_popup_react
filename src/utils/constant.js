@@ -74,7 +74,7 @@ export const SiteMenu = [
   },
   {
     label: "lifestyle",
-    endPoint: "/lifestyle",
+    endPoint: "/life-style",
     category: 230,
     forMobile: true,
   },

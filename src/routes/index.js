@@ -7,6 +7,9 @@ import Layout from "../component/layout/Index";
 import DashboardLayout from "../component/layout/DashboardLayout";
 import { dashRouteArray } from "../utils/constant";
 import PageNotFound from "../pages/404";
+import LifeStyle from "../pages/LifeStyle";
+import Travel from "../pages/Travel";
+import Health from "../pages/Heath";
 
 const MainRoute = () => {
   return (
@@ -26,6 +29,30 @@ const MainRoute = () => {
           element={
             <PublicRoutes>
               <Home />
+            </PublicRoutes>
+          }
+        />
+        <Route
+          path="/life-style"
+          element={
+            <PublicRoutes>
+              <LifeStyle />
+            </PublicRoutes>
+          }
+        />
+        <Route
+          path="/travel"
+          element={
+            <PublicRoutes>
+              <Travel />
+            </PublicRoutes>
+          }
+        />
+        <Route
+          path="/health"
+          element={
+            <PublicRoutes>
+              <Health />
             </PublicRoutes>
           }
         />

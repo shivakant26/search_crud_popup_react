@@ -21,7 +21,20 @@ const Home = () => {
     <>
       {isLoading ? (
         <>
-          <div>Loading...</div>
+          <div
+            style={{
+              display: "flex",
+              height: "80vh",
+              justifyContent: "center",
+              alignItems: "center",
+              fontSize:"25px",
+              fontWeight:"bold",
+              letterSpacing:"2.2px",
+              color:"tomato"
+            }}
+          >
+            Loading...
+          </div>
         </>
       ) : (
         <>

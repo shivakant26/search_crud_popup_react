@@ -9,6 +9,10 @@
 8. login with otp verification .
 9. redux-toolkit
 10. fev-icon set
+11. Working with three Layout(Normal , public , private)
+12. protected Route . 
+13. SEO Techqunic using Helmet Laibrary .
+14. Make multiple filter .
 
 # Laibrary used
 1. react-bootstrap
@@ -23,3 +27,6 @@ password : 123456
 # for back End
 run this command on new terminal
 npx json-server --watch db.json --port 30001
+
+# add new stepper dynamic
+http://localhost:3000/stepper
